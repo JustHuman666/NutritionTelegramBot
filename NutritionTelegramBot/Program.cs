@@ -44,11 +44,11 @@ namespace NutritionTelegramBot
             Console.WriteLine($"'{name}' with id '{id}' sent message: '{message.Text}'");
             string startText = @"Welcome. That bot can do some interesting things. Here are the list of commands: 
 /start - you can start work;
-/findbyname - you can find information about food nutrition by writing its name, bot will show you information for 1 portion;
-/findrecipe - you can find recipes by writing their name or you can find recipes of dishes with special products, bot will show you 5 recipes;
-/addfavourite - if you eat some products more than one time at month you can add information about them for faster getting information;
+/findbyname - you can find information about food nutrition by writing its name, bot will show you information for 1 portion. In case when bot can't find information, but you think that it should be, try to write name with some adjectives, like 'big banana';
+/findrecipe - you can find recipes by writing their name or you can find recipes of dishes with special products, bot will show you 5 recipes, for example you can write 'rainbow ice cream' and enjoy the result;
+/addfavourite - if you eat some products more than one time at month you can add information about them for faster getting information, just write the name of product or dish and send it, if bot can't find information, but you think that it should be, try to write name with some adjectives, like 'big banana';
 /getfavourite - if you want to get the list of your notes just use this command;
-/deletefromfavourite - if you want to delete some notes from your list of favourites use this command.";
+/deletefromfavourite - if you want to delete some notes from your list of favourites use this command, you just need to send the number of note that you want to delete, if you don't know this number, firstly use command '/getfavourite'.";
             string noCommand = "This bot does not have such command";
             using var client = new HttpClient();
             Commands command = new Commands();
